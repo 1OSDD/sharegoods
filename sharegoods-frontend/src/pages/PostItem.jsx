@@ -17,7 +17,7 @@ function PostItem() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("https://sharegoodss.onrender.com/api/categories");
+        const response = await fetch("http://localhost:5000/api/categories");
         if (!response.ok) {
           throw new Error('Failed to fetch categories');
         }
@@ -52,7 +52,7 @@ function PostItem() {
     };
 
     try {
-      const response = await fetch("https://sharegoodss.onrender.com/api/items", {
+      const response = await fetch("http://localhost:5000/api/items", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
